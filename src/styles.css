@@ -1,0 +1,31 @@
+.popup-body {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 30%;
+  top: 15%;
+  border-radius: 15px;
+  border-color: black;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-width: 50%;
+  min-height: 70%;
+  overflow: auto;
+}
+span {
+  color: #0a193f;
+  font-weight: 500;
+}
+li {
+  padding: 5px 0;
+}
+.increase li::marker {
+  content: "▲ ";
+  color: #4bddb5;
+  font-size: 0.84rem;
+}
+.decrease li::marker {
+  content: "▼ ";
+  color: #db2222;
+  font-size: 0.84rem;
+}
