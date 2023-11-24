@@ -4,7 +4,7 @@ import Table from "@mui/material/Table"
 import TableBody from "@mui/material/TableBody"
 import TableContainer from "@mui/material/TableContainer"
 import TableHead from "@mui/material/TableHead"
-import TableRow from "@mui/material/TableRow"
+import TableRow from '@mui/material/TableRow'
 import TableCell, { tableCellClasses } from "@mui/material/TableCell"
 import Paper from "@mui/material/Paper"
 import { styled } from "@mui/material/styles"
@@ -25,9 +25,9 @@ export default function BasicTable() {
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-      backgroundColor: "#74AEFA",
+      backgroundColor: theme.palette.primary.dark,
       color: theme.palette.common.white,
-      fontSize: 18,
+      fontSize: 16,
       "@media (max-width:600px)": {
         fontSize: 14,
       },
@@ -45,7 +45,7 @@ export default function BasicTable() {
 
   const StyledTableRow = styled(TableRow)(({ theme }) => ({
     "&:nth-of-type(odd)": {
-      backgroundColor: theme.palette.action.hover,
+      backgroundColor: theme.palette.primary.light,
     },
     // hide last border
     "&:last-child td, &:last-child th": {
@@ -56,9 +56,12 @@ export default function BasicTable() {
   return (
     <>
       <TableContainer component={Paper} sx={{ m: 4 }}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table sx={{
+    "& .MuiTableRow-root:hover": {
+      backgroundColor: "primary.contrastText", color: "primary.light"
+    }, minWidth: 650 }}  aria-label="simple table">
           <TableHead>
-            <TableRow>
+            <StyledTableRow hover>
               <StyledTableCell align="left">Opp Name</StyledTableCell>
               <StyledTableCell align="left">Opp Stage</StyledTableCell>
               <StyledTableCell align="center">Rep Probability</StyledTableCell>
@@ -67,7 +70,7 @@ export default function BasicTable() {
               <StyledTableCell align="right">Amount</StyledTableCell>
               <StyledTableCell align="left">Product</StyledTableCell>
               <StyledTableCell align="left">Sales Rep</StyledTableCell>
-            </TableRow>
+            </StyledTableRow>
           </TableHead>
           <TableBody>
             {data.map((row) => (

@@ -32,7 +32,7 @@ export default function BarChart({ probabilityHistory }) {
     labels.push(`Week ${i + 1}`)
   }
 
-  const pxProb = () => probabilityHistory.map((each) => each.pilytixProb * 100)
+  const pxProb = () => probabilityHistory.map((each) => each.possibleProb * 100)
 
   const repProb = () => probabilityHistory.map((each) => each.repProb * 100)
 
@@ -42,12 +42,12 @@ export default function BarChart({ probabilityHistory }) {
       {
         label: "PX Probability %",
         data: pxProb({ min: 0, max: 100 }),
-        backgroundColor: "rgba(75, 221, 181, .75)",
+        backgroundColor: "#6a3790",
       },
       {
         label: "Rep Probability %",
         data: repProb({ min: 0, max: 100 }),
-        backgroundColor: "rgba(116, 174, 250, .75)",
+        backgroundColor: "#d92c61",
       },
     ],
   }

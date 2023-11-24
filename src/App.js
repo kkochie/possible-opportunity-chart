@@ -9,8 +9,8 @@ export default function App() {
       container
       sx={{ justifyContent: "center", alignItems: "center", m: 5 }}
     >
-      <img src="./possible-logo.png" alt="Possible Logo" width="285px" />
-      <Typography variant="h1">Possible Scored Opportunities</Typography>
+      <img src="./possible-logo.png" alt="Possible Logo" />
+      <Typography color="primary" variant="h1">POSSIBLE Scored Opportunities</Typography>
       <BasicTable></BasicTable>
     </Grid>
   )

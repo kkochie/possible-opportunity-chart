@@ -58,7 +58,7 @@ export default function OppCard({ closePopup, cardData }) {
       <Grid sx={{ m: 4, justifyContent: "center" }}>
         <Grid container sx={{ justifyContent: "space-between" }}>
           <Grid>
-            <img src="./logo.png" alt="logo" width="200px" />
+            <img src="./possible-logo.png" alt="logo" width="100px" />
           </Grid>
           <Grid>
             <Button onClick={closePopup}>Close X</Button>
@@ -69,7 +69,7 @@ export default function OppCard({ closePopup, cardData }) {
             component="div"
             variant="h1"
             fontWeight="600"
-            sx={{ fontSize: 22, color: "#0a193f" }}
+            sx={{ fontSize: 22, color: "primary.dark" }}
             gutterBottom
           >
             {oppName}
@@ -89,7 +89,7 @@ export default function OppCard({ closePopup, cardData }) {
             <Typography variant="body1">
               <span>Amount:</span> ${amount.toFixed(2)}
             </Typography>
-            <Typography variant="body1" sx={{ color: "#4BDDB5" }}>
+            <Typography variant="body1" sx={{ color: "#d92c61" }}>
               <span>PX Tier:</span> {numberOfStars()}
             </Typography>
             <Grid container spacing={2} x={{ justifyContent: "flex-start" }}>
@@ -107,7 +107,7 @@ export default function OppCard({ closePopup, cardData }) {
               </Grid>
             </Grid>
             <Grid>
-              <Typography variant="h2">Probability History</Typography>
+              <Typography variant="h2" sx={{ color: "primary.dark" }}>Probability History</Typography>
               {!probabilityHistory ? (
                 "No Probability History Available"
               ) : (
@@ -125,7 +125,7 @@ export default function OppCard({ closePopup, cardData }) {
               </Grid>
             </Grid>
             <Grid>
-              <Typography variant="h2">
+              <Typography variant="h2" sx={{ color: "primary.dark" }}>
                 Factors Decreasing Chance to Win
               </Typography>
               <Grid>
